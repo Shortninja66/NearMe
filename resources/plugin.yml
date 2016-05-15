@@ -1,0 +1,9 @@
+name: NearMe
+version: 1.0
+description: An extremely modular and efficient near plugin.
+author: Shortninja
+website: http://shortninja.net
+main: net.shortninja.nearme.NearMe
+commands:
+  near:
+    description: Shows nearby players within the given radius.

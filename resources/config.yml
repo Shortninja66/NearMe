@@ -1,0 +1,47 @@
+# Made with love by Shortninja - ♥
+
+############################################################
+# +------------------------------------------------------+ #
+# |                       General                        | #
+# +------------------------------------------------------+ #
+############################################################
+
+# The base for the '/near' permission.
+# Radiuses must be divisible by 10 (for performance purposes).
+permission-near: "near.%radius%"
+
+# The bypass for 'show-invisible' and 'cooldown'.
+permission-bypass: "near.bypass"
+
+# Whether or not players with the invisible status effect will be shown in '/near'.
+show-invisible: false
+
+# The maximum distance at which the plugin will check radiuses.
+# The higher this value is, the more "lag" there will be.
+max-check: 5000
+
+# The maximum amount of players that will be listed in '/near'.
+max-players: 10
+
+# The time, in seconds, that players will be on cooldown from '/near'.
+cooldown: 5
+
+############################################################
+# +------------------------------------------------------+ #
+# |                      Messages                        | #
+# +------------------------------------------------------+ #
+############################################################
+
+prefix: "&5Near &8>"
+
+# The color that will be used for commas in the listing of players in '/near'.
+separator-color: "&b"
+
+# The color that listed players will be displayed as in '/near'.
+player-color: "&7"
+
+near: "&bUser(s) found within a radius of &7%radius%&b: &7%players%&b."
+not-ready: "&bYou cannot use &7/near &bfor &7%seconds% &bsecond(s)."
+no-permission: "&cYou do not have permission!"
+invalid-arguments: "&cInvalid arguments!"
+only-players: "&cOnly players can execute that command!"
