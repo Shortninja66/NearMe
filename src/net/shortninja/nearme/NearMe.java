@@ -58,7 +58,7 @@ public class NearMe extends JavaPlugin
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args)
 	{
-		if(label.equalsIgnoreCase("near"))
+		if(command.getName().equalsIgnoreCase("near"))
 		{
 			String argument = args.length == 0 ? "" : args[0];
 			int maxRadius = getMaxRadius(sender, argument);
