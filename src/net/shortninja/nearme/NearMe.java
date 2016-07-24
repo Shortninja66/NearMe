@@ -144,9 +144,9 @@ public class NearMe extends JavaPlugin
 	private String getNearbyPlayers(Player player, int radius)
 	{
 		List<ClosePlayer> nearbyPlayers = new ArrayList<ClosePlayer>();
-		Collection<? extends Player> playersCollection = Bukkit.getOnlinePlayers();
-		Player[] playersArray = playersCollection.toArray(new Player[playersCollection.size()]);
 		Location location = player.getLocation();
+		Collection<? extends Player> playersCollection = location.getWorld().getPlayers();
+		Player[] playersArray = playersCollection.toArray(new Player[playersCollection.size()]);
 		
 		for(int i = 0; i < playersArray.length; i++)
 		{
