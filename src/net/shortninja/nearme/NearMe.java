@@ -145,21 +145,20 @@ public class NearMe extends JavaPlugin
 	{
 		List<ClosePlayer> nearbyPlayers = new ArrayList<ClosePlayer>();
 		Collection<? extends Player> playersCollection = Bukkit.getOnlinePlayers();
-		Player[] playersArray = playersCollection.toArray(new Player[playersCollection.size()]);
 		Location location = player.getLocation();
 		
-		for(int i = 0; i < playersArray.length; i++)
+		for(Player p : playersCollection)
 		{
 			if((i - 1) == options.maxPlayers)
 			{
 				break;
 			}
 			
-			int distance = (int) playersArray[i].getLocation().distance(location);
+			int distance = (int) p.getLocation().distance(location);
 			
-			if(distance <= radius && !playersArray[i].getName().equals(player.getName()) && !playersArray[i].hasPermission(options.permissionBypass))
+			if(distance <= radius && !p.getName().equals(player.getName()) && !p.hasPermission(options.permissionBypass))
 			{
-				nearbyPlayers.add(new ClosePlayer(playersArray[i].getName(), distance));
+				nearbyPlayers.add(new ClosePlayer(p.getName(), distance));
 			}
 		}
 		
